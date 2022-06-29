@@ -1,0 +1,10 @@
+.main_page{
+    background-color: bisque;
+}
+
+.card{
+    width: 250px;
+    height: 320px;
+    border: 2px;
+    border-style: double;
+}
