@@ -1,0 +1,83 @@
+<h2>Admin</h2>
+
+
+
+<form action="/createproduct" method="post">
+<h2>Добавление прицела</h2>
+<div class="input-field">
+    <input type="text" name="Name" placeholder="optiums Name">
+    <input type="number" name="Price" placeholder="optiums Price" >
+    <input type="text" name="Image" placeholder="optiums Image" >
+</div>
+<button type="submit" style="background-color:darkseagreen;" class="btn">Добавить Прицел</button>
+</form>
+
+
+<form style="margin-top: 70px;" action="/deleteproduct" method="post">
+<h2 style=""> Удаление прицела </h2>
+    <select name="id" style="width:100px;">
+         {{#if optium.length}}
+        {{#each optium}}
+        <option value="{{_id}}">{{Name}}</option>
+        {{/each}}
+        {{/if}}
+
+    </select>
+    <button type="submit" style="background-color: red; color: white" class="btn">Удалить прицел</button>
+    </form>
+
+
+<form action="/admin/editproduct" method="POST">
+<h2>Редактирование прицела</h2>
+    <div class="auth-stretched">
+        <div class="auth-container"style="padding: 0">
+            <div class="auth-section" style="width: 1400px">
+                <div class="auth-holder" style="padding: 40px">
+                    <div style="display:flex; margin-bottom: 20px; justify-content: space-between">
+                        <div style="width: 20%">
+                            Name
+                        </div>
+
+                        <div style="width: 8%">
+                            Price
+                        </div>
+
+                        <div style="width: 20%;">
+                            Image
+                        </div>
+
+
+                    </div>
+                    {{#if optium.length}}
+                    {{#each optium}}
+                    <div style="display:flex; justify-content: space-between;">
+                        <div style="width: 20%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+                            <a href='/admin/edit/{{_id}}' style="text-decoration: none; cursor: pointer">{{Name}}</a>
+                        </div>
+
+                        <div style="width: 8%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+                            {{Price}}
+                        </div>
+
+                        <div style="width: 20%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+                            {{Image}}
+                        </div> 
+                    </div>
+                    {{/each}}
+                    {{else}}
+                    No optium!
+                    {{/if}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+
+
+
+    
+

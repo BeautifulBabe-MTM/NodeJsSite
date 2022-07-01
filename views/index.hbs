@@ -1,0 +1,66 @@
+<div class="logo">
+    <img src="https://imgur.com/YtIG5zB.png" style="width: 1000px; height: 600px; text-align: center; margin-left: 700px; ">
+
+</div>
+<div class="leftbar">
+        <div class="input-group mb-3">
+            <button class="btn"><i class="fa fa-search">Поиск</button>
+            <input type="text" class="form-control" placeholder="Поиск по магазину" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        </div>
+        <div>
+       
+            <div class="but">
+
+                <p style="font-weight: bold; font-size: 20px">Категории</p>
+                <a style="color: gray; text-decoration:none" href="">Все</a>
+                </br>
+                </br>
+                <a style="color: gray; text-decoration:none" href="">Прицел 2х</a>
+                </br>
+                </br>
+                <a style="color: gray; text-decoration:none" href="">Прицел 3х</a>
+                </br>
+                </br>
+                <a style="color: gray; text-decoration:none" href="">Прицел 4х</a>
+                </br>
+                </br>
+                <a style="color: gray; text-decoration:none" href="">Прицел 6х</a>
+                </br>
+                </br>
+                <a style="color: gray; text-decoration:none" href="">Прицел 8х</a>
+                </br>
+                </br>
+                <a style="color: gray; text-decoration:none" href="">Прицел 12х</a>
+            </div>
+             <div class="col-md-4">
+     
+
+       </div>
+            </div>
+       
+<div class="ram">
+    
+{{#if optiums.length}}
+{{#each optiums}}
+<div class="gallery">
+    <div class="new-optiums">
+        <img src={{Image}}>
+    </div> 
+    
+<div class="product">
+<h5>{{Name}}</h5>
+<h4>Цена: {{Price}}</h4>
+<button class="buy" type="button"><span>Купить</span></button>
+    </div>
+    </div>
+{{/each}}
+{{else}}
+<h2>No Optiums</h2>
+{{/if}}
+</div>
+
+
+
+ 
+
+   
