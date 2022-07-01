@@ -1,15 +1,15 @@
 {
-  "name": "shop",
+  "name": "nodestariy-main",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node app",
+    "dev": "nodemon app"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "keywords": [],
+  "description": "",
   "dependencies": {
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
